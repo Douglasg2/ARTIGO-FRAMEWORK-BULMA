@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="has-navbar-fixed-top">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulma</title>
+  <link href="css/estilo.css" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="section">
+    <div class="content">
+      <h1 class="title">
+        Bulma Framework
+      </h1>
+      <p class="subtitle">
+        Bulma é uma biblioteca CSS. Isso significa que ele fornece classes. CSS para ajudá-lo a
+        estilizar seu código HTML.
+        Para usar o Bulma, você pode usar o arquivo .css pré-compilado ou instalar os arquivos .sass para
+        personalizá-lo de acordo com suas necessidades.
+      </p>
+
+      <hr>
+      <div class="columns is-multiline">
+        <div class="column is-half  is-offset-one-quarter">
+          <div class="box box-custom ">
+            <p class="title">Sobre</p>
+            <p class="subtitle">O Bulma é um framework open-source CSS baseado em Flexbox criado por Jeremy Thomas.
+              O Bulma tem semelhanças ao Framework Bootstrap, o qual além de semelhante, foi utilizado como base.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-half">
+          <div class="box box-custom">
+            <p class="title is-5">Elementos</p>
+            <p class="subtitle">O Framework contém todos os elementos mais comuns, como: formulários, tabelas, botões.
+              menus, títulos, notificações, barras de progresso, entre outras coisas – assim como o consagrado
+              Bootstrap.</p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="box box-custom">
+            <p class="title is-5">Integração com o FontAwesome.</p>
+            <p class="subtitle">Icone bonitos e estilosos que podem ser usados sem muito esforço.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="content color-text">
+        <h3>
+          Como Importar
+        </h3>
+        <p>
+          <strong>Para Importar o Bulma em seu arquivo CSS externo, basta importar a seguinte url:</strong>
+          <br>
+          <code>@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";</code>
+          <br>
+        </p>
+        <p>
+          <strong>Para Importar o Bulma em seu arquivo Html, basta adicionar a tag link com a url:</strong>
+          <br>
+
+          <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"&gt;</code>
+          <br>
+        </p>
+        <h3>Vantagens</h3>
+        <ul>
+          <li>
+            <p>100% responsivo (mobile first)</p>
+          </li>
+          <li>
+            <p>Totalmente CSS (não requer JavaScript)</p>
+          </li>
+          <li>
+            <p>Modular (importe no seu projeto somente o que você precisa)</p>
+          </li>
+          <li>
+            <p>Moderno (construído com Flexbox)</p>
+          </li>
+          <li>
+            <p>Livre (open Source no GitHub)</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="is-multiline">
+        <a class="button is-medium is-primary" href="http://bulma.io">
+          <strong class="has-text-weight-semibold">Página inicial Bulma</strong>
+        </a>
+
+        <a class="button is-medium is-link" href="https://bulma.io/documentation/">
+          <strong class="has-text-weight-semibold">Documentação Bulma</strong>
+        </a>
+
+      </div>
+  </section>
+
+  <!-- Pop-up -->
+  <div class="modal" id="welcomeModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Boas-Vindas</p>
+        <button class="delete" aria-label="Fechar" id="closeModal"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>
+          Bem-vindo ao nosso site! Estamos felizes em tê-lo como nosso visitante.
+        </p>
+      </section>
+
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="confirmClose">Fechar</button>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const welcomeModal = document.getElementById('welcomeModal');
+    const closeModalButton = document.getElementById('closeModal');
+    const confirmCloseButton = document.getElementById('confirmClose');
+
+    function openModal() {
+      welcomeModal.classList.add('is-active');
+    }
+
+    function closeModal() {
+      welcomeModal.classList.remove('is-active');
+    }
+
+    window.addEventListener('load', openModal);
+    closeModalButton.addEventListener('click', closeModal);
+    confirmCloseButton.addEventListener('click', closeModal);
+  </script>
+
+  </div>
+  </div>
+
+
+</body>
+
+</html>

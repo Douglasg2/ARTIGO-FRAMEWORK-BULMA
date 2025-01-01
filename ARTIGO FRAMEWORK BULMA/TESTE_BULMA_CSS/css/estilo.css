@@ -1,0 +1,26 @@
+@import url(https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css);
+
+html{
+    background-color: #4d4d4d !important;
+}
+.title, .subtitle, strong, .color-text, h3{
+    text-shadow: 0.1em 0.1em 0.5em black;
+    color: rgb(255, 255, 255) !important;
+}
+
+.box-custom{
+    background-color: #00d1b2;
+    width: auto;
+    padding: 20px;
+    box-shadow: 0.3em 0.3em 0.5em rgb(0, 0, 0);
+    transition: 1s ease;
+
+}
+
+.box-custom:hover{
+    transform: scale(1.05);
+    transition: 1s ease;
+    backface-visibility: hidden !important;
+    
+}
+  
